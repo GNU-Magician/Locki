@@ -1,0 +1,4 @@
+idna==2.7
+asn1crypto==0.24.0
+pycrypto==2.6.1
+PyQt5==5.11.2
