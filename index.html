@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Frogminer Guide</title>
+  <link rel="shortcut icon" href="https://i.imgur.com/CVSu1zc.png" type="image/x-icon" />
+  <link rel="icon" href="https://i.imgur.com/CVSu1zc.png" type="image/x-icon" />
+  <script src="public/js/jquery.min.js"></script>
+  <script src="public/js/bootstrap.bundle.min.js"></script>
+  <link href="public/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="public/stylesheets/style.css" rel="stylesheet" type="text/css">
+  <meta name="description" content="Frogminer, a free CFW method for 3DS using Steelminer.">
+  <meta property="og:image" content="https://i.imgur.com/CVSu1zc.png">
+</head>
+
+<body>
+  <div class="container-content container-fluid">
+    <div class="row">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-8">
+        <h1 class="mt-5 text-center h1-page-title">Documentação Locki</h1>
+        <br>
+        <h2>O que é Locki?</h2>
+        <p>Locki é um programa para fácil uso da criptografia. Nessa documentação iremos
+        demonstrar e simplificar seu uso.
+        </p>
+        <h2>Eu vou precisar de alguma coisa antes?</h2>
+        <p>
+          Sim, antes de você conseguir usar o nosso programa você vai precisar de:<br>
+          <ul>
+            <li>Python 3.x instalado no seu computador.</li>
+            <li>O módulo PyQt5</li>
+            <li>O módulo pyAesCrypt</li>
+            <li>O módulo pyCryptoDome</li>
+          </ul>
+        </p>
+        <hr>
+        <h3>Seções</h3>
+        <ul>
+          <li>
+            <a class="a-table" href="#Section_I">Seção I: Instalando as dependências </a>
+          </li>
+          <li>
+            <a class="a-table" href="#Section_II">Section II: Exporting DS download play and injecting JPN Flipnote
+              Studio</a>
+          </li>
+          <li>
+            <a class="a-table" href="#Section_III">Section III: Launching b9sTool</a>
+          </li>
+        </ul>
+        <hr>
+        <h2 id="Section_I">Seção I: Instalando as dependências</h2>
+        <ol>
+          <li>Insert your 3DS SD card into your PC</li>
+          <li>Download the latest version of Luma3DS <a class="a-table" target="_blank" href="https://github.com/AuroraWright/Luma3DS/releases/latest/">here</a></li>
+          <li>Download the latest version of b9sTool <a class="a-table" target="_blank" href="https://github.com/zoogie/b9sTool/releases/latest/">here</a></li>
+          <li>Download the frogminer_beta <a class="a-table" target="_blank" href="./public/data/FROGminer_BETA.zip">here</a></li>
+          <li>Copy <code>boot.firm</code> from the Luma3DS 7z archive to the root of your SD Card</li>
+          <li>Copy <code>boot.nds</code> from b9sTool archive to the root of your SD Card</li>
+          <li>Copy <code>Frogtool.3dsx</code> from <code>frogminer_beta.zip</code> to the <code>3ds</code> folder</li>
+          <li>Copy the <code>private</code> folder from <code>frogminer_beta.zip</code> to the root of your SD Card</li>
+        </ol>
+        <hr>
+        <h2 id="Section_II">Section II: Exporting DS download play and injecting JPN Flipnote Studio</h2>
+        <ol>
+          <li>Reinsert the SD Card into your 3ds and power it on</li>
+          <li>Launch Frogtool.3dsx from the Homebrew Launcher</li>
+          <li>Select "Export clean DS Download Play"</li>
+          <li>Press START to exit, power off your console and reinsert your SD Card into your PC</li>
+          <li>Copy <code>484E4441.bin</code> from the root of your SD Card to somewhere you can remember (for example
+            your desktop)</li>
+          <li>Open <a class="a-table" target="_blank" href="https://jenkins.nelthorya.net/job/DSIHaxInjector/build">this
+              website</a> and input the info required in the corresponding fields (inputting an email is not required).
+            Use the <code>484E4441.bin</code> file for DSiBin field</li>
+          <li>Press "Build" and wait a bit for the process to complete</li>
+          <li>Under build history search your username and click on the latest build</li>
+          <li>Download <code>484E4441.bin.patched_username</code> with <strong>your</strong> username on it. If it is
+            not your username it is not your file</li>
+          <li>Rename <code>484E4441.bin.patched_username</code> to <code>484E4441.bin.patched</code></li>
+          <li>Copy <code>484E4441.bin.patched</code> to the root of your SD Card</li>
+        </ol>
+        <hr>
+        <h2 id="Section_III">Section III: Launching b9sTool</h2>
+        <ol>
+          <li>Reinsert the SD Card into the 3DS and power it on</li>
+          <li>Launch Frogtool.3dsx from the Homebrew Launcher</li>
+          <li>Select "IMPORT patched DS Download Play"</li>
+          <li>Tap the touch screen to continue, then select "Boot patched DS Download Play"</li>
+          <li>Complete the initial setup by choosing the left option when applicable until you reach this screen</li>
+          <img src="https://i.imgur.com/hpiwWZR.png" style="padding:10px;">
+          <li>Tap the left large box, then Tap the box with the SD Card icon</li>
+          <li>Tap the face, then Tap the bottom right button to continue</li>
+          <li>Tap the bottom left button then Tap the second button on top with the Film icon</li>
+          <li>Use the touch screen to scroll and highlight frame 3/3 on the film reel</li>
+          <li>Tap the third box with the letter A, scroll back to frame 1/3 then Tap the fourth box with the letter A.
+            This should launch b9sTool</li>
+          <li>Select "Install boot9strap" and confirm with START & SELECT</li>
+          <li>Wait for it to say "Done!" Exit b9sTool and power off your 3DS</li>
+          <ul>
+            <li>You may need to force power off by holding the power button</li>
+          </ul>
+          <li>Power on your 3DS to launch the Luma3DS configuration menu</li>
+          <ul>
+            <li>If your 3ds boots normally to the HOME Menu then boot9strap did not install correctly. Please follow
+              Point B from <a class="a-table" target="_blank" href="https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md">this
+                guide</a></li>
+          </ul>
+          <li>Use the (A) button and the D-pad to enable "Show Nand or user string in System Settings"</li>
+          <li>Press START to save and reboot</li>
+        </ol>
+        <p class="p-box">
+          You can now continue with the
+          <a href="https://3ds.hacks.guide/finalizing-setup" target="_blank">Finalizing Setup</a><br>Once completed,
+          you can launch
+          Frogminer
+          from Homebrew Launcher and select "RESTORE clean DS Download Play" to restore Download Play functionality
+        </p>
+        <hr>
+        <h2>Credits</h2>
+        <ul>
+          <li>zoogie - frogminer, seedminer, b9stool</li>
+          <li>Martin Korth (nocash) - location hints for flipnote privkeys, no$gba, Gbatek docs</li>
+          <li>Shutterbug2000 - ugopwn exploit</li>
+          <li>Fincs and Wintermute - Flipnote Lenny, a revised version of ugopwn</li>
+          <li>zacchi4k and Chromaryu - tool assistance</li>
+          <li>eip - original guide</li>
+          <li>Kuma - revision 2 of eips guide and proofreading</li>
+          <li>Jisagi - implementation and design</li>
+        </ul>
+        <hr>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+  </div>
+</body>
+
+</html>
