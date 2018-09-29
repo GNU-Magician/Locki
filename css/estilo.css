@@ -1,0 +1,277 @@
+@font-face {
+     font-family: CaviarDreams;
+     src: url(../fonts/CaviarDreams.ttf);
+}
+
+
+html{
+    margin: -8px;
+    background-color: black;
+}
+
+body{
+  margin:30px;
+    border: 5px solid white; 
+     background-color:darkslategrey;
+}
+
+
+
+.tela_inicio{
+	position: relative;
+	width: 100%;
+	overflow: hidden; 
+	height:100%;
+	background: url(../imagens/madeira-locki.png) center center no-repeat;
+	background-size:1520px;
+    border-bottom: 5px solid black; 
+    background-attachment:fixed;
+}
+
+.img_1{
+    position: absolute;
+    margin-left: 100px; 
+    margin-top: 5px;
+}
+    
+.img_2{ 
+
+    position: relative;
+    margin-left: 50%;
+}
+
+#navmenu ul {
+    border: 30px;
+        font:16px arial,tahoma,verdana;
+		list-style:none; 
+		margin:0 ;
+        margin-left: 33%;
+		padding:0;
+}
+
+
+#navmenu ul li {
+         float:left;
+}
+#navmenu ul li a {
+           color:white;
+            font-weight: bold;
+		   text-decoration:none;
+		   padding:30px 40px ;
+		   display:block;
+        
+}
+#navmenu li ul {
+            
+          display:none;
+}
+#navmenu ul li a:hover {
+                 background:gray;
+				 color:fff;
+                font-weight: bold;
+}
+#navmenu li:hover ul {
+               display:block;
+			   position:relative;
+}
+#navmenu li:hover li {
+              float:none;
+			  font-size:12px;
+}
+#navmenu li:hover a {
+              background:#696969;
+			  color:#fff;
+}
+#navmenu li:hover li a:hover {
+background:#222;
+}
+
+
+h1{
+    font-family: CaviarDreams;
+    font-size: 60px;
+    text-align: center;
+    color:white;
+    letter-spacing: 2px; 
+    margin-top: 250px;
+    margin-bottom: 250px;
+}
+
+h2{
+    font-family: CaviarDreams;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;    
+    text-align: center;
+}
+
+h3{
+    
+    text-align: center;
+}
+
+p{
+    text-align: justify;
+    position: absolute;
+    font-size: 20px;
+    margin-right: 55%;
+    margin-left: 5%;
+    color: white;
+}
+
+p#p_dowload{
+    margin: inherit;
+    margin-top: 2px;
+    text-align: center;
+    position: inherit;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+p#p_dowload2{
+    margin: inherit;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    text-align: center;
+    position: inherit;
+}
+
+#dowload{
+    
+    background: url(../imagens/Textura_cinza_0008.png) center center no-repeat;
+	background-size:1520px;
+    border-top: 5px solid black;
+}
+
+
+
+a.scrollup {
+    width: 40px;
+    color: #fff;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 50px;
+}
+
+
+iframe{
+    
+    margin-bottom: -9px;
+}
+
+p#com {
+    position: absolute;
+    color: white;
+}
+
+a#link{
+    font-family:CaviarDreams;
+    border-radius: 7px;
+    margin-left: 41%;
+    font-size: 30px;
+    color: black;
+    padding: 2px;
+    padding-left: 45px;
+    padding-right: 45px;
+    background-color: white;
+    text-decoration: none;
+    
+}
+
+#contato{
+   background: url(../imagens/madeira-locki.png) center center no-repeat;
+	background-size:1520px;
+    background-attachment:fixed;
+    border-top: 5px solid black;  
+}
+
+form{
+    font:16px CaviarDreams;
+    margin-left: 27%;
+    margin-bottom: 2%;
+    text-decoration:underline ;
+    border: 5px solid black;
+    background: url(../imagens/Textura_cinza_0008.png) center center no-repeat;
+	background-size:1520px;
+}
+
+
+
+.form {
+  display: flex;
+  width: 550px;
+  color: #CCC;
+  padding-right: 100px;
+}
+
+.form .section {
+  flex-grow: 1;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.form .section .control-group {
+  margin-top: 10px;
+}
+
+.form .section .control-group .control {
+  width: 100%;
+}
+
+
+.form .section .control-group .control-label {
+  display: block;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+#nome{
+    border: 2px solid blue;
+    padding-left: 10px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    margin-left: -10px;
+    
+}
+
+#email{
+    border: 2px solid blue;
+    padding-left: 10px;
+    padding-right: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: -10px;
+}
+
+#assunto{
+    border: 2px solid blue;
+    padding-right: 115px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: -10px;
+}
+
+#msg{
+    border: 2px solid blue;
+    padding-left: 10px;
+    padding-right: 300px;
+    padding-top: 10px;
+    padding-bottom: 100px;
+    margin-left: -10px;
+}
+
+#enviar{
+    
+    margin-top: 30px;
+    margin-left:85%;
+        padding: 5px;
+}
+

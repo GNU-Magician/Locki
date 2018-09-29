@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Locki Documentação</title>
+  <link rel="shortcut icon" href="https://i.imgur.com/CVSu1zc.png" type="image/x-icon" />
+  <link rel="icon" href="https://i.imgur.com/CVSu1zc.png" type="image/x-icon" />
+  <script src="public/js/jquery.min.js"></script>
+  <script src="public/js/bootstrap.bundle.min.js"></script>
+  <link href="public/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="public/stylesheets/style.css" rel="stylesheet" type="text/css">
+  <meta name="description" content="Locki Documentação">
+  <meta property="og:image" content="https://i.imgur.com/CVSu1zc.png">
+</head>
+
+<body>
+  <div class="container-content container-fluid">
+    <div class="row">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-8">
+        <h1 class="mt-5 text-center h1-page-title">Documentação Locki</h1>
+        <br>
+        <h2>O que é Locki?</h2>
+        <p>Locki é um programa para fácil uso da criptografia. Nessa documentação iremos
+        demonstrar e simplificar seu uso.
+        </p>
+        <h2>Eu vou precisar de alguma coisa antes?</h2>
+        <p>
+          Sim, antes de você conseguir usar o nosso programa você vai precisar de:<br>
+          <ul>
+            <li>Python 3.x instalado no seu computador.</li>
+            <li>O módulo PyQt5</li>
+            <li>O módulo pyAesCrypt</li>
+            <li>O módulo pyCryptoDome</li>
+          </ul>
+        </p>
+        <hr>
+        <h3>Seções</h3>
+        <ul>
+          <li>
+            <a class="a-table" href="#Section_I">Seção I: Instalando as dependências </a>
+          </li>
+          <li>
+            <a class="a-table" href="#Section_II">Seção II: Termos Usados</a>
+          </li>
+          <li>
+            <a class="a-table" href="#Section_III">Seção III: Como usar</a>
+          </li>
+        </ul>
+        <hr>
+        <h2 id="Section_I">Seção I: Instalando as dependências</h2>
+        <div class="p-box">
+          <p>Você apenas terá que seguir esses passos uma vez, da primeira em diante só é
+            preciso executar o programa.
+          </p>
+        </div>
+        <div class="alert-box">
+          <p>Quando instalando o Python, lembre-se de marcar a opção <code>Add Python 3.x to PATH</code>, caso contrário você terá que adicioná-lo às variáveis de ambiente manualmente.</p>
+        </div>
+        
+        <ol>
+          <li>Baixe o nosso programa do repositório no GitHub <a class="a-table" href="https://github.com/GNU-Magician/Locki">aqui.</a> Clique em "Clone or Download" e selecione "Download as Zip"</li>
+          <li>Extraia o programa usando um programa compactador de arquivos como <a class="a-table" href="https://www.win-rar.com/start.html?&L=0">WinRar</a> ou <a class="a-table" href="https://www.7-zip.org/">7-Zip</a>.</li>
+          <li>Instale Python <a class="a-table" href="https://www.python.org/downloads/">direto do site dos desenvolvedores.</a></li>
+          <li>Abra a pasta do aplicativo e aperte <code>Shift + Botão Direito do Mouse</code> em qualquer lugar que não seja em cima de um arquivo e selecione <code>Abrir janela de comando aqui.</code>.
+          <li>Digite dentro do prompt de comando <code>pip install -r requirements.txt</code> e espere.</li>
+          <li>Espere o instalador terminar de baixar tudo e estamos prontos!</li>
+        </ol>
+        <hr>
+        <h2 id="Section_II">Seção II: Termos Usados</h2>
+        <p>Usamos vários termos cujo significado não é aparente a primeira vista, aqui está um glossário dessas palavras usadas.</p>
+        <ul>
+
+          <li>Criptografar, Encriptar: O ato de esconder/mascarar dados os transformando em informação sem sentido.</li>
+          <li>Descriptografar, Decriptar: Transformar os dados criptografados em sua froma original.</li>
+          <li>Algoritmo: Uma sequência de instruções bem definidas usadas para executar um objetivo.</li>
+          <li>Cifra: A mesma coisa que algoritmo, porém esse termo é mais comum na criptografia.</li>
+          <li>Senha: É uma palavra-chave criada pelo usuário para proteger sua chave.</li>
+          <li>Chave: Uma informação de variado tamanho criado pela cifra usado para criptografar ou descriptografar dados.</li>
+          <ul>
+              <li>Chave Simétrica: Chave que consegue tanto encriptar quanto decriptar informação.</li>
+              <li>Chave Assimétrica: São um par de chaves, uma pública e uma privada, que respectivamente criptografam e recuperam informações e são matemáticamente ligadas uma à outra.</li>
+
+          </ul>
+          <li>Texto Cifrado: O conteúdo mascarado após ter sido passado por uma cifra.</li>
+          <li>Hashing: O ato de, por meio de um algoritmo de autenticação, transformar dados em um texto fixo, permitindo sua autenticação.</li>
+          <li>Assinatura: É usada para confirmar o remetente do <code>hash</code>, e é criada pela chave privada do destinatário.</li>
+          <li>AES, RSA, Salsa20, Cifra de César: São os nomes distintos de cada cifra.</li>
+
+        </ul>
+        <hr>
+        <h2 id="Section_III">Seção III: Como Usar</h2>
+        <div class="p-box"><p>Essa seção vai ser divida em vários pedaços, procure a parte que lhe interesse.</p></div>
+        <div class="p-box"><p>Todas as janelas exceto a principal e a janela de autenticação tem a sua exata oposta, ou seja, a janela normal criptografa, a janela oposta (geralmente acessada com um botão nomeado "Descriptografar") decripta os mesmos dados.</p></div>
+        <div class="alert-box"><p>Se você usar uma cifra específica para encriptar dados (por exemplo, AES), use <strong>apenas ela</strong> para transformá-los de volta. A mistura de cifras distintas <strong>sempre</strong> acaba com resultados inesperados.</p></div>
+        <h3>Tela Principal</h3>
+        <ul>
+        <p><li>Temos quatro botões, o primeiro, <code>Criptografia Básica</code> te leva à página de cifras simples como a Cífra de César ou a de Pontuação. Essas cifras são datadas e não recomendadas para uso por serem grandemente inseguras.</li></p>
+        <p><li>O segundo botão, <code>Criptografia Avançada</code> abre a janela com os algorítmos usados atualmente para proteger informações, como <code>Salsa20</code> e <code>AES.</code></li></p>
+        <p><li>O terceiro botão te leva à aba de autenticação, onde você vê os métodos mais comuns de confirmação de integridade de dados. A cifra usada em todos os casos é <code>SHA-256</code> por razões de compatibilidade.</li></p>
+        <p><li>O ultimo botão vai para a janela de <code>Encriptação de Arquivos</code>, onde você pode usar cifras simétricas (AES) ou assimétricas (RSA) para mascarar os arquivos do seu computador.</li></p>
+        </ul>
+        <h3>Criptografia Básica</h3>
+        <p>Nessa seção temos duas cifras, a <code>Cifra de César</code> e <code>Pontuação</code>, as duas servem para mostrar o quão rudimentar eram os primeiros algorítmos.</p>
+        <ul>
+          <h4><p>Criptografar</p></h4>
+        <ul><h5>Cifra de Cesar</h5>
+          <p>Para usar, digite na caixa de texto de cima e clique no botão <code>enviar</code>, o seu texto será cifrado de acordo.</p>
+        <h5>Pontuação</h5>
+          <p>Siga as mesmas instruções da Cifra de César.</p>
+        </ul>
+          <h4><p>Descriptografar</p></h4>
+        <ul>
+          <h5>Cifra de Cesar</h5>
+          <p>Para transformá-los de volta ao normal, copie o texto cifrado e cole na caixa de texto de cima.</p>
+          <h5>Pontuação</h5>
+          <p>Siga as mesmas instruções da Cifra de César.</p>
+        </ul>
+        </ul>
+        <h3>Criptografia Avançada</h3>
+        <div class="p-box">É nesse ponto que os algorítmos param de fazer sentido para nós mortais, porém não vamos explicar como eles funcionam, pois requer muito mais conhecimento do que essa documentação oferece e vai além do objetivo dessa explicação.</div>
+        <p>Aqui usamos algoritmos atuais (AES, Salsa20) para mascarar textos apenas. Se quizer encriptar arquivos vá para a seção de <code>Encriptação de Arquivos</code></p>
+        <ul><h4><p>Criptografar</p></h4>
+          <ul><h5>AES</h5>
+          <p>Para encriptar seus dados repita o que você fez acima, digite o texto que você deseja mascarado, e aperte <code>enviar</code>. Você vai receber o texto cifrado e o nó, que serve como um identificador próprio desse texto em específico; guarde os dois para poder transformar o texto de volta.</p>
+          <h5>Salsa20</h5>
+          <p>Digite o texto em cima, e clique em enviar.</p>
+          </ul>
+        <h4><p>Descriptografar</p></h4>
+        <ul><h5>AES</h5>
+          <p>Copie e cole o texto cifrado e o nó nas suas caixas de texto respectivas, após isso aperte em enviar para recuperar o texto.</p>
+        <h5>Salsa20</h5>
+          <p>Pegue o texto cifrado e cole na caixa de texto de cima, aperte enviar e receba seu texto de volta.</p>
+        </ul>
+        </ul>
+        <h3>Autenticação</h3>
+        <p>Essa janela é dedicada à autenticação de conteúdo, criando uma "assinatura" que equivale à aquela informação em específico, confirmando sua autenticidade.</p>
+        <div class="alert-box">Aqui mais que nas outras janelas, é importante que você e a pessoa cujo conteúdo vai ser autenticado estejam usando <strong>a mesma cifra.</strong> Cifras diferentes criam assinaturas diferentes. A cifra usada em todos os exemplos é SHA-256.</div>
+        <ul>
+          <h4>Autenticação (SHA-256)</h4>
+          <p>Para autenticar seu texto simplesmente digite ele na caixa de texto em cima e clique em enviar. Embaixo será o "hash" dele.</p>
+          <h4>Assinatura (SHA-256)</h4>
+          <p>Essa seção é dedicada ao ato de assinar um hash, que simplesmente é mostrar que a pessoa que autenticou tal arquivo é você, e não um adversário.</p>
+          <p>Para conseguir assinar seu "hash" você vai precisar de um par de chaves RSA, olhe na seção de <code>Encriptação de Arquivos</code> para criar um par.</p>
+          <p>Agora que você tem um par de chaves, clique no botão "procurar" de cima para achar sua chave privada no seu computador, e o botão de baixo para achar o arquivo que será autenticado, e envie tudo. O resultado será a assinatura desse objeto.</p>
+          <h4>Checar Assinatura (SHA-256)</h4>
+          <p>Essa seção é para a checagem de assinatura, onde você verifica se ela é legitima ou não.</p>
+          <p>Para conseguir verificar digite a assinatura em questão na barra de texto em cima, escolha a chave pública da pessoa cuja chave primária você quer verificar, e envie tudo. Se válida, uma janela irá dizer que a assinatura é válida, se não..</p>
+
+        </ul>
+
+        <h3>Encriptação de Arquivos</h3>
+        <div class="alert-box">Tome cuidado quando lidando com seus arquivos, se você esquecer a senha, ou não tiver a chave correta, os arquivos encriptados estão <strong>perdidos para sempre.</strong></div>
+        <ul><h4><p>Criptografar</p></h4>
+          <ul><h5>AES</h5>
+            <p>Para encriptar seu arquivo, clique no botão <code>procurar</code> para o achar no seu sistema, e digite uma senha (opcional, se não quizer não digite nada) para ter seu arquivo mascarado.</p>
+          <h5>Criar Par de Chaves</h5>
+            <p>Essa seção é necessária para mostrar como você pode criar um par de chaves para ser usado tanto para fazer assinaturas (olhe na seção <code>Autenticação</code>) quanto para usar a cifra RSA.</p>
+            <p>Para criar um par de chaves RSA clique no botão <code>Criar</code> e escolha um lugar onde salvar as duas chaves.</p>
+
+            <div class="alert-box">As duas chaves são matematicamente ligadas, se você por alguma razão, cancelar uma das duas mas criar a outra, será impossível ver a original novamente. A mesma coisa acontece se uma das duas for deletada, então tome cuidado com suas chaves.</div>
+
+            <h5>RSA</h5>
+            <p>Para encriptar seus dados, escolha a chave pública do par de chaves cuja pessoa você quer que decripte os arquivos, e escolha o arquivo a ser cifrado, e aperte em enviar.</p>
+          </ul>
+          <h4><p>Descriptografar</p></h4>
+          <ul><h5>AES</h5>
+            <p>Para transformar seu arquivo de volta ao normal, ache-o no explorador de arquivos (com o sufixo .aes adicionado à ele) e abra-o.</p>
+            <p>Logo após, digite a senha embaixo (se não houver senha deixe vazio), e, se ela estiver correta, seu arquivo será restaurado.</p>
+          <h5>RSA</h5>
+          <p>Escolha a chave privada pertencente ao par de chaves da qual a chave pública foi a usada para encriptar os dados, e escolha o arquivo a ser recuperado.</p>
+
+          </ul>
+        </ul>
+
+        <p class="p-box">
+          Você sempre pode ajudar no desenvolvimento do nosso projeto no nosso <a href="https://github.com/GNU-Magician/Locki">GitHub</a>.
+
+        </p>
+        <hr>
+        <h2>Agradecimentos</h2>
+        <ul>
+          <li>Jisagi - design, implementação</li>
+          <li>eip - documentação original</li>
+          <li>Noirscape "Valentijn" V. - Design, ajuda no código, ideias, apoio moral </li>
+
+
+        </ul>
+        <hr>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+  </div>
+</body>
+
+</html>
